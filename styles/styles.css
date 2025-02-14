@@ -10,14 +10,13 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #ffe6e6;
+    background-color: #A2D2FF;
     overflow: hidden;
     font-family: 'Arial', sans-serif;
 }
 
 .contenedor {
     width: 90vw; /* Ocupa el 90% del ancho del viewport */
-    max-width: 600px; /* Limita el ancho máximo para pantallas grandes */
     text-align: center;
     display: flex;
     justify-content: center;
@@ -44,17 +43,6 @@ body {
     animation: entrar 2s forwards, vibrar 0.5s infinite 2s; /* Animación de entrada y vibración */
 }
 
-/* Icono de sobre */
-.sobre::before {
-    content: '✉️'; /* Icono de sobre */
-    position: absolute;
-    left: -20%;
-    transform: translate(0%, -55%);
-    font-size: 21vh; /* Tamaño del icono */
-    color: rgba(43, 77, 147, 0.392); /* Color tenue (blanco con transparencia) */
-    pointer-events: none; /* Evita que el icono interfiera con los clics */
-}
-
 /* Texto sobre el icono de sobre */
 .sobre .texto-carta {
     position: absolute;
@@ -79,8 +67,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 4vh; /* 2.5% del alto del viewport */
-    color: #280d49a9;
+    font-size: 5vh; /* 4% del alto del viewport */
+    color: rgba(0, 0, 0, 0.744);
     opacity: 1; /* Visible desde el inicio */
     transition: opacity 0.5s;
 }
@@ -103,8 +91,8 @@ body {
 }
 
 .pregunta h1 {
-    font-size: 4vh; /* 4% del alto del viewport */
-    color: #ff4d4d;
+    font-size: 12vh; /* 4% del alto del viewport */
+    color: #ff6161;
     margin-bottom: 2vh; /* 2% del alto del viewport */
 }
 
@@ -119,13 +107,13 @@ body {
 }
 
 #si {
-    background-color: #4CAF50;
+    background-color: #77dd77;
     color: white;
     max-height: 100%;
 }
 
 #no {
-    background-color: #f44336;
+    background-color: #ff6961;
     color: white;
 }
 
@@ -218,5 +206,30 @@ body {
     }
     75% {
         transform: translateX(2px) rotate(-2deg);
+    }
+}
+
+.fondo-corazon {
+    position: fixed;
+    top: 20%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background-image: url("/resources/heart.svg"); /* Ruta a tu archivo SVG */
+    background-size: cover; /* Ajusta la imagen al tamaño del contenedor */
+    background-repeat: no-repeat;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    animation: expand 3s ease forwards;
+}
+
+@keyframes expand {
+    from {
+        width: 0;
+        height: 0;
+    }
+    to {
+        width: 300vw;
+        height: 300vh;
     }
 }

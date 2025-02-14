@@ -6,6 +6,8 @@ const pregunta = document.querySelector('.pregunta');
 const botonSi = document.getElementById('si');
 const botonNo = document.getElementById('no');
 const corazones = document.querySelector('.corazones');
+const fondoCorazon = document.querySelector('.fondo-corazon');
+var contador=0;
 
 // Tamaños iniciales
 let tamañoNo = 48; // Tamaño inicial del botón "No" en píxeles
@@ -15,6 +17,9 @@ let tamañoSi = 48; // Tamaño inicial del botón "Sí" en píxeles
 sobreCerrado.addEventListener('click', () => {
     // Abre el sobre y muestra la carta (ya está visible)
     sobreCerrado.classList.add('hidden');
+        // Activar la animación del fondo en forma de corazón
+        fondoCorazon.classList.remove('hidden');
+        fondoCorazon.classList.add('visible');
 });
 
 sobre.addEventListener('click', () => {
@@ -42,6 +47,7 @@ botonNo.addEventListener('mouseover', () => {
     // Aumenta el tamaño del botón "Sí" en 2 píxeles cada vez
     tamañoSi += 20;
     botonSi.style.fontSize = `${tamañoSi}px`;
+    contador++;
 });
 
 // Al hacer clic en "Sí"
