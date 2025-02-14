@@ -1,0 +1,222 @@
+/* Tamaño de fuente base */
+html {
+    font-size: 2vh; /* Tamaño de fuente base en relación al alto del viewport */
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #ffe6e6;
+    overflow: hidden;
+    font-family: 'Arial', sans-serif;
+}
+
+.contenedor {
+    width: 90vw; /* Ocupa el 90% del ancho del viewport */
+    max-width: 600px; /* Limita el ancho máximo para pantallas grandes */
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* Alinea los elementos verticalmente */
+}
+
+/* Sobre cerrado */
+.sobre-cerrado {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    background-color: #ff4d4d00;
+    width: 100%; /* Ocupa el 100% del contenedor */
+}
+
+.sobre {
+    width: 100vw; /* Ocupa el 50% del ancho del viewport */
+    aspect-ratio: 1.6; /* Relación de aspecto (ancho/alto) */
+    background-color: #ff4d4d00;
+    border-radius: 1vh; /* 1% del alto del viewport */
+    position: relative;
+    animation: entrar 2s forwards, vibrar 0.5s infinite 2s; /* Animación de entrada y vibración */
+}
+
+/* Icono de sobre */
+.sobre::before {
+    content: '✉️'; /* Icono de sobre */
+    position: absolute;
+    left: -20%;
+    transform: translate(0%, -55%);
+    font-size: 21vh; /* Tamaño del icono */
+    color: rgba(43, 77, 147, 0.392); /* Color tenue (blanco con transparencia) */
+    pointer-events: none; /* Evita que el icono interfiera con los clics */
+}
+
+/* Texto sobre el icono de sobre */
+.sobre .texto-carta {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3vh; /* 3% del alto del viewport */
+    color: rgba(255, 255, 255, 0); /* Color del texto */
+    text-align: center;
+    z-index: 1; /* Asegura que el texto esté sobre el icono */
+}
+
+/* Carta dentro del sobre */
+.carta {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 90%;
+    height: 90vh;
+    background-color: rgba(255, 255, 255, 0);
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4vh; /* 2.5% del alto del viewport */
+    color: #280d49a9;
+    opacity: 1; /* Visible desde el inicio */
+    transition: opacity 0.5s;
+}
+
+.carta.hidden {
+    opacity: 0; /* Oculta la carta al hacer clic */
+}
+
+/* Animación de la pregunta */
+.pregunta {
+    opacity: 0;
+    transition: opacity 1s;
+    width: 90vw; /* Ocupa el 90% del ancho del viewport */
+    margin: 0 auto; /* Centra horizontalmente */
+    text-align: center; /* Asegura que el texto esté centrado */
+}
+
+.pregunta.visible {
+    opacity: 1;
+}
+
+.pregunta h1 {
+    font-size: 4vh; /* 4% del alto del viewport */
+    color: #ff4d4d;
+    margin-bottom: 2vh; /* 2% del alto del viewport */
+}
+
+/* Estilos para los botones */
+.botones button {
+    padding: 1.5vh 3vw; /* 1.5% del alto y 3% del ancho del viewport */
+    font-size: 2.5vh; /* 2.5% del alto del viewport */
+    border: none;
+    border-radius: 0.5vh; /* 0.5% del alto del viewport */
+    cursor: pointer;
+    transition: all 0.3s ease; /* Transición suave para todos los cambios */
+}
+
+#si {
+    background-color: #4CAF50;
+    color: white;
+    max-height: 100%;
+}
+
+#no {
+    background-color: #f44336;
+    color: white;
+}
+
+/* Efecto al pasar el cursor sobre el botón "No" */
+#no:hover {
+    transform: scale(0.2); /* Reduce el tamaño del botón al 90% */
+    font-size: 2vh; /* Reduce el tamaño de la fuente */
+    padding: 1.2vh 2.4vw; /* Ajusta el padding para que el botón se vea proporcional */
+}
+
+/* Animación de corazones */
+.corazones {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden; /* Evita que los corazones desborden la pantalla */
+}
+
+.corazones.visible {
+    animation: none; /* Eliminamos la animación anterior */
+}
+
+/* Estilos para cada corazón */
+.corazon-lluvia {
+    position: absolute;
+    font-size: 2vh; /* Tamaño de los corazones */
+    color: #0077ff; /* Color azul para los corazones */
+    animation: llover 5s linear infinite; /* Animación infinita */
+}
+
+/* Animación de lluvia de corazones */
+@keyframes llover {
+    0% {
+        transform: translateY(-100%); /* Empieza arriba de la pantalla */
+    }
+    100% {
+        transform: translateY(100vh); /* Llega al final de la pantalla */
+    }
+}
+.hidden {
+    display: none;
+}
+
+/* Media queries para dispositivos móviles */
+@media (max-width: 600px) {
+    .sobre {
+        width: 80vw; /* Ocupa más espacio en móviles */
+        max-width: 80vw; /* Limita el ancho máximo al 80% del viewport */
+    }
+
+    .sobre::before {
+        top: -20%; /* Ajuste para móviles */
+        width: 50%; /* Ajuste para móviles */
+        padding-bottom: 20%; /* Ajuste para móviles */
+    }
+
+    .carta {
+        font-size: 2vh; /* 2% del alto del viewport */
+    }
+
+    .pregunta h1 {
+        font-size: 3.5vh; /* 3.5% del alto del viewport */
+    }
+
+    .botones button {
+        font-size: 2vh; /* 2% del alto del viewport */
+        padding: 1vh 2vw; /* 1% del alto y 2% del ancho del viewport */
+    }
+}
+
+/* Animación de entrada del sobre */
+@keyframes entrar {
+    0% {
+        transform: translateX(-100vw); /* Empieza fuera de la pantalla a la izquierda */
+    }
+    100% {
+        transform: translateX(0); /* Llega al centro */
+    }
+}
+
+@keyframes vibrar {
+    0%, 100% {
+        transform: translateX(0) rotate(0deg);
+    }
+    25% {
+        transform: translateX(-2px) rotate(2deg);
+    }
+    75% {
+        transform: translateX(2px) rotate(-2deg);
+    }
+}

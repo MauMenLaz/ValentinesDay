@@ -4,22 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Animación de San Valentín</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="icon" type="image/x-icon" href="resources/circulo.png">
 </head>
 <body>
+
     <div class="contenedor">
-        <div class="sobre">
-            <div class="carta">
-                <div class="corazon">❤️</div>
+        <!-- Sobre cerrado -->
+        <div class="sobre-cerrado">
+            <div class="sobre">
+                <div class="carta">
+                    <p style="font-size: 2.3vh;">Hola Michelle, ¡Te llegó una carta!</p>
+                </div>
             </div>
         </div>
+
+        <!-- Pregunta y botones -->
+        <div class="pregunta hidden">
+            <h1>¿Quieres ser mi San Valentín?</h1>
+            <div class="botones">
+                <button id="si">Sí</button>
+                <button id="no">No</button>
+            </div>
+        </div>
+
+        <!-- Animación de corazones -->
+        <div class="corazones hidden"></div>
     </div>
-    <script>
-        // Espera a que la animación de "volar" termine y luego abre el sobre
-    setTimeout(() => {
-        const sobre = document.querySelector('.sobre');
-        sobre.classList.add('abierto');
-    }, 2000); // 2000ms = 2 segundos (tiempo de la animación de "volar")
-    </script>
+
+
+
+    <script src="scripts/script.js"></script>
 </body>
 </html>
