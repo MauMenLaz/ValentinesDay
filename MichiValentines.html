@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animación de San Valentín</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="contenedor">
+        <div class="sobre">
+            <div class="carta">
+                <div class="corazon">❤️</div>
+            </div>
+        </div>
+    </div>
+    <script>
+        // Espera a que la animación de "volar" termine y luego abre el sobre
+    setTimeout(() => {
+        const sobre = document.querySelector('.sobre');
+        sobre.classList.add('abierto');
+    }, 2000); // 2000ms = 2 segundos (tiempo de la animación de "volar")
+    </script>
+</body>
+</html>
