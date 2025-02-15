@@ -130,7 +130,7 @@ botonNo.addEventListener('click', () => {
     botonNo.style.transform = 'scale(0.6)';
     botonNo.style.fontSize = '2vh';
     botonNo.style.padding = '1.2vh 2.4vw';
-
+    contador++;
       // Mover el botón a una posición aleatoria
       moverBoton();
 
