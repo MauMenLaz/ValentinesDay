@@ -1,7 +1,3 @@
-/* Tamaño de fuente base */
-html {
-    font-size: 2vh; /* Tamaño de fuente base en relación al alto del viewport */
-}
 
 body {
     margin: 0;
@@ -12,7 +8,7 @@ body {
     height: 100vh;
     background-color: #A2D2FF;
     overflow: hidden;
-    font-family: 'Arial', sans-serif;
+    font-family: 'Quicksand', sans-serif;
 }
 
 .contenedor {
