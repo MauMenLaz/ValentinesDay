@@ -6,6 +6,9 @@ const pregunta = document.querySelector('.pregunta');
 const botonSi = document.getElementById('si');
 const botonNo = document.getElementById('no');
 const corazones = document.querySelector('.corazones');
+const mensaje = document.querySelector('.mensaje');
+const mensaje2 = document.querySelector('.mensaje2');
+const mensaje3 = document.querySelector('.mensaje3');
 const fondoCorazon = document.querySelector('.fondo-corazon');
 var contador=0;
 
@@ -84,6 +87,21 @@ botonSi.addEventListener('click', () => {
 
     // Crear corazones cada 300ms
     setInterval(crearCorazon, 300);
+
+    //Funcion para mostrtar mensaje dependiendo
+    
+if(contador==0)  
+{
+    mensaje.classList.remove('hidden');
+    mensaje.classList.add('visible');
+}else if(contador<6)
+{
+    mensaje2.classList.remove('hidden');
+    mensaje2.classList.add('visible');
+}else{
+    mensaje3.classList.remove('hidden');
+    mensaje3.classList.add('visible');
+}
 });
 
 
@@ -121,3 +139,5 @@ botonNo.addEventListener('click', () => {
     botonSi.style.fontSize = `${tamañoBaseSi}vh`; // Aplicar el nuevo tamaño
     botonSi.style.padding = `${tamañoBaseSi * 0.6}vh ${tamañoBaseSi * 1.2}vw`; // Ajustar el padding proporcionalmente
     });
+
+

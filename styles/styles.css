@@ -233,3 +233,82 @@ body {
         height: 300vh;
     }
 }
+
+
+/* Estilos para el div "mensaje" */
+.mensaje {
+    position: fixed; /* Posición fija para centrar en la pantalla */
+    top: 50%; /* Centrado vertical */
+    left: 50%; /* Centrado horizontal */
+    transform: translate(-50%, -50%); /* Ajuste fino para centrar */
+    width: 300px; /* Ancho del mensaje */
+    padding: 20px; /* Espaciado interno */
+    background-color: rgba(255, 255, 255, 0.779); /* Fondo blanco con 90% de opacidad */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra suave */
+    text-align: center; /* Centrar el texto */
+    z-index: 1000; /* Asegurar que esté por encima de otros elementos */
+    opacity: 0; /* Inicialmente oculto */
+    transition: opacity 1.5s ease; /* Transición suave para mostrar/ocultar */
+}
+/* Mostrar el mensaje */
+.mensaje.visible {
+    opacity: 1; /* Hacer visible */
+}
+
+/* Ocultar el mensaje */
+.mensaje.hidden {
+    opacity: 0; /* Mantener oculto */
+}
+
+/* Estilos para el div "mensaje" */
+.mensaje2 {
+    position: fixed; /* Posición fija para centrar en la pantalla */
+    top: 50%; /* Centrado vertical */
+    left: 50%; /* Centrado horizontal */
+    transform: translate(-50%, -50%); /* Ajuste fino para centrar */
+    width: 300px; /* Ancho del mensaje */
+    padding: 20px; /* Espaciado interno */
+    background-color: rgba(255, 255, 255, 0.779); /* Fondo blanco con 90% de opacidad */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra suave */
+    text-align: center; /* Centrar el texto */
+    z-index: 1000; /* Asegurar que esté por encima de otros elementos */
+    opacity: 0; /* Inicialmente oculto */
+    transition: opacity 1.5s ease; /* Transición suave para mostrar/ocultar */
+}
+/* Mostrar el mensaje */
+.mensaje2.visible {
+    opacity: 1; /* Hacer visible */
+}
+
+/* Ocultar el mensaje */
+.mensaje2.hidden {
+    opacity: 0; /* Mantener oculto */
+}
+
+/* Estilos para el div "mensaje" */
+.mensaje3 {
+    position: fixed; /* Posición fija para centrar en la pantalla */
+    top: 50%; /* Centrado vertical */
+    left: 50%; /* Centrado horizontal */
+    transform: translate(-50%, -50%); /* Ajuste fino para centrar */
+    width: 300px; /* Ancho del mensaje */
+    padding: 20px; /* Espaciado interno */
+    background-color: rgba(255, 255, 255, 0.779); /* Fondo blanco con 90% de opacidad */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra suave */
+    text-align: center; /* Centrar el texto */
+    z-index: 1000; /* Asegurar que esté por encima de otros elementos */
+    opacity: 0; /* Inicialmente oculto */
+    transition: opacity 1.5s ease; /* Transición suave para mostrar/ocultar */
+}
+/* Mostrar el mensaje */
+.mensaje3.visible {
+    opacity: 1; /* Hacer visible */
+}
+
+/* Ocultar el mensaje */
+.mensaje3.hidden {
+    opacity: 0; /* Mantener oculto */
+}
